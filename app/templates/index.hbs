@@ -1,0 +1,26 @@
+{{page-title "Index"}}
+<div class="container mx-auto p-5">
+    <div class="w-64 p-5">
+       
+ <a class="navbar-brand navbar-nav-wrap-brand " href="/" aria-label="APILayer">
+<img src="https://assets.apilayer.com/logo/logo.png" alt="APILayer | Hassle Free API Marketplace">
+</a>
+ <h1 class="font-bold">Did you Mean This?" API</h1>
+    </div>
+   
+<form>
+    <label for="SpellChecker" class="sr-only">Your message</label>
+    <div class="flex items-center py-2 px-3 bg-gray-50 rounded-lg dark:bg-gray-700">
+     
+        <Textarea @value={{this.text}} id="SpellChecker" rows="1" class="block mx-4 p-2.5 w-full" placeholder="Your message..."/>
+            <button type="button" {{on 'click' this.checkspell}} class="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600">
+            
+          Check Spelling
+        </button>
+    </div>
+</form>
+<h1>Did you Mean This?</h1>
+<p id="result" class="bg-gray-200 rounded p-5">{{this.result}}</p>
+
+</div>
+{{outlet}}
